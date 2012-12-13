@@ -8,4 +8,14 @@ namespace :hacker_news do
   task :b do
     puts 'bbb'
   end
+
+  desc "this is c"
+  task :c do
+    puts 'ccc'
+  end
+
+  desc "this is d"
+  task :d => [:b, :c] do
+    puts 'd'
+  end
 end
